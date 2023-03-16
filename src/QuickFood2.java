@@ -6,6 +6,15 @@ import java.io.IOException;
 import java.util.*;
 import java.text.DecimalFormat;
 
+/**
+ * QuickFood2 is a food delivery system for a company called "Quick Food".
+ * QuickFood is a company that receives orders from a client, and distributes
+ * them to a driver based on their current load and their location.  This class
+ * ensures that orders are distributed accordingly.
+ * @author Henri Branken
+ * @version %U%
+ *
+ */
 public class QuickFood2 {
 	// Declare some constants.
 	final static String DRIVERS_FP = "src/data/driver-info.txt";
@@ -15,6 +24,11 @@ public class QuickFood2 {
 	
 	
 	/* MAIN -------------------------------------------------------------------------------------*/
+	/**
+	 * 
+	 * @param args No String array is passed to this main method.
+	 * @throws IOException When a problem occurs trying to output the details to INVOICE_FP.
+	 */
 	public static void main(String[] args) throws IOException {
 		// Create a new Customer object, and print out its details.
 		Customer cust = new Customer();
@@ -64,8 +78,13 @@ public class QuickFood2 {
 	
 	
 	/* FORMAT TO A PRETTY ADDRESS ---------------------------------------------------------------*/
-	// Take an input address in which the fields are separated by commas, and convert it
-	//     into a string in which the fields are separated by newlines `\n`.
+	/**
+	 * Takes an input address in which the fields are separated by commas, and convert it
+	 * into a string in which the fields are separated by newlines `\n`.
+	 * @param input Customer Address information in which the fields are comma delimited.
+	 * @return A formatted string in which the fields are delimited by newlines.  This makes
+	 * the invoice output more user-friendly.
+	 */
 	public static String prettyAddress(String input) {
 		String[] addArr = input.split(",");
 		String newAddress;
@@ -80,7 +99,12 @@ public class QuickFood2 {
 	
 	
 	/* FORMAT TO A PRETTY NUMBER ----------------------------------------------------------------*/
-	// Conver the input number to the following format: xxx xxx xxxx
+	/**
+	 * Converts an input number (of type String) to the following format: xxx xxx xxxx.
+	 * This makes the phone numbers more user-friendly in the invoice. 
+	 * @param num The contact number of either the client or the restaurant.
+	 * @return The contact number in the specified xxx xxx xxxx format.
+	 */
 	public static String prettyNumber(String num) {
 		num = num.replaceAll(" ", "");
 		String numNew = num.substring(0, 3) + " " + num.substring(3, 6) + " " + num.substring(6);
@@ -91,6 +115,11 @@ public class QuickFood2 {
 	
 	
 	/* CAPITALIZE THE FIRST LETTER OF A GIVEN STRING --------------------------------------------*/
+	/**
+	 * Capitalizes the first letter of a raw String.
+	 * @param raw A string whose first letter is not necessarily capitalized.
+	 * @return A string whose first letter is definitely capitalized (for the Latin alphabet at least).
+	 */
 	public static String capFirstLetter(String raw) {
 		return raw.substring(0, 1).toUpperCase() + raw.substring(1);
 	}
@@ -99,8 +128,16 @@ public class QuickFood2 {
 	
 	
 	/* GET THE CLOSEST DRIVER WITH THE SMALLEST LOAD --------------------------------------------*/
-	// Based on the argument `cityToMatch`, get a driver in that city (if possible) with the smallest load.
-	// If there are no drivers in `cityToMatch`, return "none".
+	/**
+	 * Get a driver with the smallest load in the given city if possible.  It might be the case
+	 * that the customer resides in an area unreachable by Quick Food services.
+	 * @param cityToMatch The city we need to filter against in our driver database, <code>drivers-info.txt</code>.
+	 * @return The name of the driver in <code>cityToMatch</code> with the smallest load.
+	 * If there are no drivers in <code>cityToMatch</code>, then return the String "none".
+	 * @throws IOException Occurs if the <code>drivers-info.txt</code> file is corrupted or cannot be opened.
+	 * @throws ArrayIndexOutOfBoundsError Typically occurs when there is a <code>NULL</code> value in a 
+	 * particular row in <code>drivers-info.txt</code> such that the data cannot be parsed properly.
+	 */
 	public static String getDriver(String cityToMatch) {
 		// We start out with `currentDriver = "none"`, and `currentLoad = -1`.
 		String line = "";
@@ -152,7 +189,7 @@ public class QuickFood2 {
 			
 		}
 		catch (IOException e) {
-			System.out.println("\nAn error has occurred while reading the 'drivers.txt' file."
+			System.out.println("\nAn error has occurred while reading the 'drivers-info.txt' file."
 					         + "\n" + e.getMessage() + ".");
 		}
 		// Return the final value of `currentDriver` back to the caller.
@@ -163,8 +200,17 @@ public class QuickFood2 {
 	
 	
 	/* POPULATE THE INVOICE INFORMATION ---------------------------------------------------------*/
-	// Capture all the details from both the customer (`cObj`) and the restaurant (`rObj`),
-	//     and write the output to the text-file "src/data/invoice.txt".
+	/**
+	 * Capture all the details from both the customer (`cObj`) and restaurant (`rObj`) objects,
+	 * and write all the contents to the text file "src/data/invoice.txt".
+	 * @param cObj The Customer object.
+	 * @param rObj The Restaurant object.
+	 * @param chosenDriver The name of the driver assigned to the particular order.  Note that the
+	 * city of the driver is the same as that of the customer.
+	 * @return A large String value containing all the invoice information to be written to an
+	 * external text file <code>"src/data/invoice.txt"</code>.  The actual writing to <code>invoice.txt</code>
+	 * takes place in the <code>main</code> clause.
+	 */
 	public static String printInvoice(Customer cObj, Restaurant rObj, String chosenDriver) {
 		System.out.println("\n\n");
 		
