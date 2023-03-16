@@ -1,0 +1,21 @@
+Order number: 1255
+Customer: Henri
+Email: henri@mail.com
+Phone Number: 082 566 2635
+Location: Bloemfontein
+
+You have ordered the following from Spur in Bloemfontein:
+
+2 x Steak (R55.36)
+5 x Surloin (R21.23)
+3 x Fillet (R33.33)
+
+Special instructions: ---
+
+Total: R316.86
+
+Kailan Snow is nearest to the restaurant and so he will be delivering your order to you at:
+
+18 Eike Ave
+
+If you need to contact the restaurant, their number is 157 887 4122.
