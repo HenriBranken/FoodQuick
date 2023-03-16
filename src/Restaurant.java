@@ -1,7 +1,13 @@
 import java.util.Scanner;
 import java.util.*;
 
-
+/**
+ * The blueprint for creating a restaurant object with the attributes [1] <code>name</code>, [2] <code>city</code>, 
+ * [3] <code>contactNumber</code>, [4] <code>mealAndQty</code>, [5] <code>mealAndPrice</code>, 
+ * [6] <code>specialInstr</code> and [7] <code>total</code>.
+ * @author Henri Branken
+ *
+ */
 public class Restaurant {
 	// Attributes of the Restaurant.
 	private String name;
@@ -208,7 +214,9 @@ public class Restaurant {
 	
 	
 	
-	// Give a text description of the 'Restaurant' object.
+	/**
+	 * Print out a text representation of the <code>Restaurant</code> object to the console.
+	 */
 	public String toString() {
 		String objectTxt =  "[Restaurant Name]           " + name;
 		       objectTxt += "\n[City of Restaurant]        " + city;
