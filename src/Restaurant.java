@@ -34,7 +34,7 @@ public class Restaurant {
 	// Create a Scanner object, `sc`, for reading input from the user.
 	Scanner sc = new Scanner(System.in);
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for the restaurant name, and store the value in `this.name` in the constructor.
 	private String setName() {
 		System.out.println("\nWhat is the name of the restaurant");
@@ -46,11 +46,11 @@ public class Restaurant {
 	String getName() {
 		return this.name;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for the city in which the restaurant is based, and store the value in `this.city` in the constructor.
 	private String setCity() {
 		System.out.println("\nIn what city is the restaurant located?");
@@ -60,11 +60,11 @@ public class Restaurant {
 	String getCity() {
 		return this.city;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for the restaurant' contact number, and store the value in `this.contactNumber` in the constructor.
 	private String setContactNumber() {
 		System.out.println("\nWhat is the restaurant's contact number?");
@@ -74,11 +74,11 @@ public class Restaurant {
 	String getContactNumber() {
 		return this.contactNumber;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// In `hashMap1`, each (String) key value (a meal) maps to an (integer) quantity value.
 	// Each key value is unique.
 	private Map<String, Integer> setMealAndQuantity() {
@@ -114,11 +114,11 @@ public class Restaurant {
 	Map<String, Integer> getMealAndQuantity() {
 		return this.mealAndQty;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// In `hashMap2`, each (String) key value (a meal) maps to a (float) price value.
 	// Each key value is unique.
 	// In this procedure, we extract all the meals from `hashMap1` and store it into the `Set<String> meals`.
@@ -150,11 +150,11 @@ public class Restaurant {
 	Map<String, Float> getMealAndPrice() {
 		return this.mealAndPrice;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for special instructions (if any), and store the value in `this.specialInstr` in the constructor.
 	private String setSpecialInstr() {
 		// Prompt the user to determine if they have any special instructions for the restaurant.
@@ -179,11 +179,11 @@ public class Restaurant {
 	String getSpecialInstr() {
 		return this.specialInstr;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// From the 2 maps we constructed earlier (`mealAndQty` & `mealAndPrice`), calculate the total cost for the user's order.
 	// Finally, store the `total` in `this.total` in the constructor.
 	private float setTotal(Map<String, Integer> mapQty, Map<String, Float> mapPrice) {
@@ -210,7 +210,7 @@ public class Restaurant {
 	float getTotal() {
 		return this.total;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
