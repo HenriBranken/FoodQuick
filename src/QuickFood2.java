@@ -20,10 +20,10 @@ public class QuickFood2 {
 	final static String INVOICE_FP = "src/data/invoice.txt";
 	final static String DEFAULT_MSG = "Sorry! Our drivers are too far away from you to be able to deliver to your location.";
 	final static int INITIAL_LOAD = -1;
-	final static String SEP = "\n\n/* ------------------------------------------------------------------------------------------*/";
+	final static String SEP = "\n\n// ----------------------------------------------------------------------------------- /";
 	
 	
-	/* MAIN -------------------------------------------------------------------------------------*/
+	// MAIN ------------------------------------------------------------------------------------- /
 	/**
 	 * The ultimate goal of the <code>main(...)</code> function is to generate an invoice based on
 	 * particulars captured from the user.
@@ -74,11 +74,11 @@ public class QuickFood2 {
 					         + "\n" + e.getMessage());
 		}
 	}
-	/* END OF MAIN ------------------------------------------------------------------------------*/
+	// END OF MAIN ------------------------------------------------------------------------------ /
 	
 	
 	
-	/* FORMAT TO A PRETTY ADDRESS ---------------------------------------------------------------*/
+	// FORMAT TO A PRETTY ADDRESS --------------------------------------------------------------- /
 	/**
 	 * Takes an input address in which the fields are separated by commas, and converts it
 	 * into a string in which the fields are separated by newlines <code>`\n`</code>.
@@ -95,11 +95,11 @@ public class QuickFood2 {
 		newAddress = String.join("\n", addArr);
 		return newAddress;
 	}
-	/* ------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------ /
 	
 	
 	
-	/* FORMAT TO A PRETTY NUMBER ----------------------------------------------------------------*/
+	// FORMAT TO A PRETTY NUMBER ---------------------------------------------------------------- /
 	/**
 	 * Converts an input number (of type String) to the following format: xxx xxx xxxx.
 	 * This makes the contact numbers more user-friendly to read in the invoice. 
@@ -111,11 +111,11 @@ public class QuickFood2 {
 		String numNew = num.substring(0, 3) + " " + num.substring(3, 6) + " " + num.substring(6);
 		return numNew;
 	}
-	/* ------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------ /
 	
 	
 	
-	/* CAPITALIZE THE FIRST LETTER OF A GIVEN STRING --------------------------------------------*/
+	// CAPITALIZE THE FIRST LETTER OF A GIVEN STRING -------------------------------------------- /
 	/**
 	 * Capitalizes the first letter of a raw String.
 	 * @param raw A string whose first letter is not necessarily capitalized.
@@ -125,11 +125,11 @@ public class QuickFood2 {
 	public static String capFirstLetter(String raw) {
 		return raw.substring(0, 1).toUpperCase() + raw.substring(1);
 	}
-	/* ------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------ /
 	
 	
 	
-	/* GET THE CLOSEST DRIVER WITH THE SMALLEST LOAD --------------------------------------------*/
+	// GET THE CLOSEST DRIVER WITH THE SMALLEST LOAD -------------------------------------------- /
 	/**
 	 * Get a driver with the smallest load in the given city if possible (it might be the case
 	 * that the customer resides in an area unreachable by Quick Food services).
@@ -198,11 +198,11 @@ public class QuickFood2 {
 		// Return the final value of `currentDriver` back to the caller.
 		return currentDriver;
 	}
-	/* ------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------ /
 	
 	
 	
-	/* POPULATE THE INVOICE INFORMATION ---------------------------------------------------------*/
+	// POPULATE THE INVOICE INFORMATION --------------------------------------------------------- /
 	/**
 	 * Capture all the details from both the customer <code>(`cObj`)</code> and restaurant 
 	 * <code>(`rObj`)</code> objects, and write the contents to the text file <code>"src/data/invoice.txt"</code>.
@@ -251,5 +251,5 @@ public class QuickFood2 {
 	    // Print out the invoice to the console for the sake of convenience.
 		return invoiceTxt;
 	}
-	/* ------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------ /
 }

@@ -1,0 +1,5 @@
+bin/
+.classpath
+.project
+FoodQuickFlowChart.pdf
+src/data/invoice.txt

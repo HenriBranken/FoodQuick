@@ -34,7 +34,7 @@ public class Customer {
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for the order number, and store the value in `this.orderNumber` in the constructor.
 	private int setOrderNumber() {
 		System.out.println("What is the order number?");
@@ -52,11 +52,11 @@ public class Customer {
 	int getOrderNumber() {
 		return this.orderNumber;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for the his/her name, and store the value in `this.name` in the constructor.
 	private String setName() {
 		System.out.println("\nPlease enter the customer's name:");
@@ -66,11 +66,11 @@ public class Customer {
 	String getName() {
 		return this.name;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for his/her Contact Number, and store the value in `this.contactNumber` in the constructor.
 	private String setContactNumber() {
 		System.out.println("\nWhat is the customer's contact number?");
@@ -80,11 +80,11 @@ public class Customer {
 	String getContactNumber() {
 		return this.contactNumber;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for his/her address, and store the value in `this.address` in the constructor.
 	private String setAddress() {
 		System.out.println("\nWhat is the customer's address?");
@@ -94,11 +94,11 @@ public class Customer {
 	String getAddress() {
 		return this.address;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/	
+	// ------------------------------------------------------------------------------------------- /	
 	// Prompt the user for his/her City, and store the value in `this.city` in the constructor.
 	private String setCity() {
 		System.out.println("\nIn what city is the customer located?");
@@ -108,11 +108,11 @@ public class Customer {
 	String getCity() {
 		return this.city;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	// Prompt the user for his/her email address, and store the value in `this.email` in the constructor.
 	private String setEmail() {
 		System.out.println("\nWhat is the email address of the customer?");
@@ -129,7 +129,7 @@ public class Customer {
 	String getEmail() {
 		return this.email;
 	}
-	/*-------------------------------------------------------------------------------------------*/
+	// ------------------------------------------------------------------------------------------- /
 	
 	
 	
