@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * The blueprint for creating a customer object with the attributes [1] <code>orderNumber</code>, 
+ * [2] <code>name</code>, [3] <code>contactNumber</code>, [4] <code>address</code>, [5] <code>city</code>
+ * and [6] <code>email address</code>.
+ * @author Henri Branken
+ *
+ */
 public class Customer {
 	// Attributes of the Customer object.
 	private int orderNumber;
@@ -9,9 +16,10 @@ public class Customer {
 	private String city;
 	private String email;
 
-	// The constructor for the Customer class.
-	// Note that we set the attributes of the Customer object by prompting the user for input, 
-	// and then scanning that in and returning it to the associated this.{...} variable.
+	// Customer Constructor
+	// Notice that we set the attributes of the Customer object via setter methods which prompts
+	// the user for keyboard input.
+	// The input is captured by a Scanner and assigned to the associated attribute.
 	Customer() {
 		this.orderNumber = setOrderNumber();
 		this.name = setName();
@@ -41,8 +49,6 @@ public class Customer {
 		
 	}
 	
-	// Notice that the default modifier grants access to [1] Class, [2] Package, [3] Subclass in the same package.
-	// It is more restrictive than the `protected` modifier.
 	int getOrderNumber() {
 		return this.orderNumber;
 	}
@@ -127,7 +133,9 @@ public class Customer {
 	
 	
 	
-	// Print out a text representation of the 'Customer' Object.
+	/**
+	 * Print out a text representation of the <code>Customer</code> object to the console.
+	 */
 	public String toString() {
 		String objectTxt =  "[Order Number]     " + orderNumber;
 		       objectTxt += "\n[Customer Name]    " + name;
