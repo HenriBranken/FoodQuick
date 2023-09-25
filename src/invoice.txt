@@ -1,21 +1,21 @@
-Order number: 1255
-Customer: Henri
-Email: henri@mail.com
-Phone Number: 082 566 2635
-Location: Bloemfontein
+Order number: 1234
+Customer: Henri Branken
+Email: henri@email.com
+Phone Number: 082 785 5983
+Location: Durban
 
-You have ordered the following from Spur in Bloemfontein:
+You have ordered the following from Spur in Durban:
 
-2 x Steak (R55.36)
-5 x Surloin (R21.23)
-3 x Fillet (R33.33)
+2 x Sirloin (R300.00)
 
 Special instructions: ---
 
-Total: R316.86
+Total: R600.00
 
-Kailan Snow is nearest to the restaurant and so he will be delivering your order to you at:
+Eugene Santana is nearest to the restaurant and so he will be delivering your order to you at:
 
-18 Eike Ave
+18 Eike Avenue
+Jim Fouche Park
+Welkom
 
-If you need to contact the restaurant, their number is 157 887 4122.
+If you need to contact the restaurant, their number is 082 566 2635.
